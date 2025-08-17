@@ -8,6 +8,10 @@ public class Cars {
     boolean ismanual;
 
     // methods / operation
+    public Cars()
+    {
+
+    }
     public void printInfo()
     {
         System.out.println("speed: " + speed + "," + " color: " +  color + "," + " model: " + model);
