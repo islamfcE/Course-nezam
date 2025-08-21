@@ -2,6 +2,7 @@ package SessionOne;
 
 public class Cars {
     // attibutes / data
+    static int counter=0; // not static
     int speed;
     String color;
     String model;
@@ -11,6 +12,7 @@ public class Cars {
     public Cars()
     {
         System.out.println("empty object created");
+        counter++;
     }
     public Cars(String color,String model,int speed, boolean ismanual)
     {
@@ -18,14 +20,21 @@ public class Cars {
         this.speed = speed;
         this.color = color;
         this.ismanual = ismanual;
+        counter++;
     }
     public Cars(String color,String model)
     {
         this.model = model;
         this.color = color;
+        counter++;
     }
     public void printInfo()
     {
         System.out.println("speed: " + speed + "," + " color: " +  color + "," + " model: " + model);
+
+    }
+    public static void PrintNumberOfOpjects()
+    {
+        System.out.println("Number of objects: " + counter);
     }
 }
